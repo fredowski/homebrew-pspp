@@ -1,0 +1,9 @@
+language: c
+os: osx
+env:
+- COLUMNS=78
+addons:
+  homebrew:
+    brewfile:
+      - Formula/spread-sheet-widget.rb
+      - Formula/pspp.rb

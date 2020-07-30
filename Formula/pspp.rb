@@ -9,6 +9,7 @@ class Pspp < Formula
   depends_on "gettext"
   depends_on "texinfo"
   depends_on "gdk-pixbuf"
+  depends_on "perl"
   depends_on "spread-sheet-widget"
 
   def install
@@ -16,6 +17,8 @@ class Pspp < Formula
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
+    system "make"
+    system "make", "check"
     system "make", "install"
   end
 

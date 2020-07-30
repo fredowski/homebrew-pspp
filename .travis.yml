@@ -4,9 +4,7 @@ env:
 - COLUMNS=78
 addons:
   homebrew:
-    brewfile:
-      - ./Formula/spread-sheet-widget.rb
-      - ./Formula/pspp.rb
+    taps: fredowski/pspp
     update: true
 script:
-  - echo "Done"
+  - brew install pspp

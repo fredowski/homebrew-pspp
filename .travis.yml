@@ -7,3 +7,4 @@ addons:
     brewfile:
       - Formula/spread-sheet-widget.rb
       - Formula/pspp.rb
+    update: true

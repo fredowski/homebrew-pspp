@@ -6,5 +6,9 @@ addons:
   homebrew:
     taps: fredowski/pspp
     update: true
-script:
-  - brew install --verbose pspp
+jobs:
+  include:
+    - script: brew install --verbose pspp
+      name: "stable"
+    - script: brew install --head --verbose pspp
+      name: "development" 

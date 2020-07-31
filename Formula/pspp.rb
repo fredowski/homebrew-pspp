@@ -3,6 +3,7 @@ class Pspp < Formula
   homepage "https://www.gnu.org/software/pspp"
   url "http://ftp.gnu.org/gnu/pspp/pspp-1.2.0.tar.gz"
   sha256 "a50e437974cff8d57f41ba87026509c9c383474e52717944ea6565e6ff11f71e"
+  head "https://benpfaff.org/~blp/pspp-master/20200730050501/source/pspp-1.3.0-g2131e8.tar.gz"
 
   depends_on "gtk+3"
   depends_on "gtksourceview3"

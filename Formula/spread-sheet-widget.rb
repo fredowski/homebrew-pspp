@@ -1,8 +1,8 @@
 class SpreadSheetWidget < Formula
   desc "library for Gtk+ for viewing and manipulating 2 dimensional tabular data"
   homepage "https://www.gnu.org/software/ssw/"
-  url "http://alpha.gnu.org/gnu/ssw/spread-sheet-widget-0.3.tar.gz"
-  sha256 "1e2dc2c6fb8f3718188cec635b6601ba453b4bb3683ccc67cddef825a0f723c1"
+  url "http://alpha.gnu.org/gnu/ssw/spread-sheet-widget-0.6.tar.gz"
+  sha256 "72a225f4bd9d60a6e106a37f2c3bbe249e81b0ca07c0a2fcdde8f5930c4d9321"
 
   depends_on "pkg-config"
   depends_on "gtk+3"

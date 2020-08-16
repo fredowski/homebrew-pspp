@@ -1,8 +1,8 @@
 class Pspp < Formula
   desc "statistical analysis of sampled data"
   homepage "https://www.gnu.org/software/pspp"
-  url "http://ftp.gnu.org/gnu/pspp/pspp-1.2.0.tar.gz"
-  sha256 "a50e437974cff8d57f41ba87026509c9c383474e52717944ea6565e6ff11f71e"
+  url "http://ftp.gnu.org/gnu/pspp/pspp-1.4.0.tar.gz"
+  sha256 "631073120c69ed0b6c0b636c2a36486bc616db1b71210dc8e2a358674bcb663f"
   head "https://benpfaff.org/~blp/pspp-master/20200730050501/source/pspp-1.3.0-g2131e8.tar.gz"
 
   depends_on "gtk+3"

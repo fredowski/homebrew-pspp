@@ -7,10 +7,11 @@ class Pspp < Formula
 
   depends_on "gtk+3"
   depends_on "gtksourceview3"
+  depends_on "adwaita-icon-theme"
   depends_on "gettext"
-  depends_on "texinfo"
+  depends_on "texinfo" => :build
   depends_on "gdk-pixbuf"
-  depends_on "perl"
+  depends_on "perl" => :build
   depends_on "gsl"
   depends_on "coreutils" => :build
   depends_on "spread-sheet-widget"
@@ -23,6 +24,7 @@ class Pspp < Formula
     system "make"
     system "make", "check"
     system "make", "install"
+    system "make", "install-html"
   end
 
   test do

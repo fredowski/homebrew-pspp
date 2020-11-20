@@ -12,6 +12,7 @@ class Pspp < Formula
   depends_on "gdk-pixbuf"
   depends_on "perl"
   depends_on "gsl"
+  depends_on "coreutils" => :build
   depends_on "spread-sheet-widget"
 
   def install

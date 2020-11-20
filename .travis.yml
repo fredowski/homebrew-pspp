@@ -1,5 +1,8 @@
 language: c
 os: osx
+osx_image:
+- Xcode 12.0
+- Xcode 9.4
 env:
 - COLUMNS=78
 addons:
@@ -8,7 +11,7 @@ addons:
     update: true
 jobs:
   include:
-    - script: brew install --verbose pspp
+    - script: brew install pspp
       name: "stable"
-    - script: brew install --head --verbose pspp
+    - script: brew install --head pspp
       name: "development" 

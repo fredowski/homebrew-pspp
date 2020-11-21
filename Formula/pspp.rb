@@ -24,7 +24,6 @@ class Pspp < Formula
     system "make"
     system "make", "check"
     system "make", "install"
-    system "make", "install-html"
   end
 
   test do

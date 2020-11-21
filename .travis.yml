@@ -1,16 +1,14 @@
 language: c
 os: osx
-osx_image:
-- Xcode 12.0
-- Xcode 9.4
 env:
-- COLUMNS=78
+  global:
+    - COLUMNS=78
+  jobs:
+    - FRITZ_BREW_OPTIONS="--head --verbose"
+    - FRITZ_BREW_OPTIONS="--verbose"
 addons:
   homebrew:
     taps: fredowski/pspp
-jobs:
-  include:
-    - script: brew install --verbose pspp
-      name: "stable"
-    - script: brew install --head --verbose pspp
-      name: "development" 
+    update: true
+scripts:
+  - brew install $FRITZ_BREW_OPTIONS pspp

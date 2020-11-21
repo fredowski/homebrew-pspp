@@ -6,9 +6,6 @@ env:
   jobs:
     - FRITZ_BREW_OPTIONS="--head --verbose"
     - FRITZ_BREW_OPTIONS="--verbose"
-addons:
-  homebrew:
-    taps: fredowski/pspp
-    update: true
-scripts:
-  - brew install $FRITZ_BREW_OPTIONS pspp
+before_install:
+  - brew install ./Formula/spread-sheet-widget.rb
+script: brew install $FRITZ_BREW_OPTIONS ./Formula/pspp.rb

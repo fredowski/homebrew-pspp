@@ -1,7 +1,7 @@
 homebrew-pspp
 =============
 
-[![Build Status](https://travis-ci.org/fredowski/homebrew-pspp.svg?branch=master)](https://travis-ci.org/fredowski/homebrew-pspp)
+[![build status](https://github.com/fredowski/homebrew-pspp/workflows/homebrew/badge.svg)](https://github.com/fredowski/homebrew-pspp/actions)
 
 Install pspp and spread-sheet-widget via homebrew.
 

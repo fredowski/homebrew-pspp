@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: homebrew
 
 # Controls when the action will run. 
 on:
@@ -19,6 +19,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: macos-latest
+    strategy:
+      matrix:
+        homebrew_opts: ["--verbose --head","--verbose"]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -27,8 +30,9 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Spreadsheet widget
-        run: |
-          brew install --verbose ./Formula/spread-sheet-widget.rb
+        run: brew install --verbose ./Formula/spread-sheet-widget.rb
 
       - name: pspp
-        run: brew install --verbose --head ./Formula/pspp.rb
+        env:
+          HOMEBREW_OPTS: ${{ matrix.homebrew_opts }}
+        run: brew install $HOMEBREW_OPTS ./Formula/pspp.rb

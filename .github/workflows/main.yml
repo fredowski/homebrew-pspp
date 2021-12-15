@@ -22,6 +22,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: macos-latest
     strategy:
+      fail-fast: false
       matrix:
         homebrew_opts: ["--verbose --head","--verbose"]
 

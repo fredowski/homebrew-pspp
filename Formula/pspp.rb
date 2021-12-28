@@ -5,6 +5,8 @@ class Pspp < Formula
   sha256 "56b551184f86f2664a1ae8e1558788c40b30cd4fe876dafa4f609d63a0561953"
   head "https://benpfaff.org/~blp/pspp-master/latest-source.tar.gz"
 
+  option "with-relocation", "Build a relocatable application which is required for a bundle"
+
   depends_on "gtk+3"
   depends_on "gtksourceview3"
   depends_on "adwaita-icon-theme"
@@ -17,13 +19,19 @@ class Pspp < Formula
   depends_on "spread-sheet-widget"
 
   def install
+    args = ["--disable-dependency-tracking",
+            "--disable-silent-rules"]
+    if build.with? "relocation"
+      args << "--enable-relocatable"
+      args << "--disable-rpath"
+    end
     system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
+                          *args,
                           "--prefix=#{prefix}"
     system "make"
     system "make", "check"
     system "make", "install"
+    system "make", "html"
     system "make", "install-html"
   end
 

@@ -1,8 +1,8 @@
 class Pspp < Formula
   desc "statistical analysis of sampled data"
   homepage "https://www.gnu.org/software/pspp"
-  url "https://ftp.gnu.org/gnu/pspp/pspp-1.4.1.tar.gz"
-  sha256 "56b551184f86f2664a1ae8e1558788c40b30cd4fe876dafa4f609d63a0561953"
+  url "https://ftp.gnu.org/gnu/pspp/pspp-1.6.0.tar.gz"
+  sha256 "8d5b51dba8ad812ee93288ad664d8184f164d3b394d2f9c09fcb39f86e0b0a12"
   head "https://benpfaff.org/~blp/pspp-master/latest-source.tar.gz"
 
   option "with-relocation", "Build a relocatable application which is required for a bundle"
@@ -13,7 +13,7 @@ class Pspp < Formula
   depends_on "gettext"
   depends_on "texinfo" => :build
   depends_on "gdk-pixbuf"
-  depends_on "perl" => :build
+  depends_on "python" => :build
   depends_on "gsl"
   depends_on "coreutils" => :build
   depends_on "spread-sheet-widget"
@@ -26,6 +26,7 @@ class Pspp < Formula
       args << "--disable-rpath"
     end
     system "./configure", "--disable-debug",
+                          "--without-perl-module",
                           *args,
                           "--prefix=#{prefix}"
     system "make"

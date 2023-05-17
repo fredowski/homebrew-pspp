@@ -7,7 +7,7 @@ class Pspp < Formula
 
   option "with-relocation", "Build a relocatable application which is required for a bundle"
 
-  depends_on "glib-utils" => :build
+  depends_on "glib" => :build
   depends_on "gtk+3"
   depends_on "gtksourceview4"
   depends_on "adwaita-icon-theme"

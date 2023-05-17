@@ -5,7 +5,7 @@ class SpreadSheetWidget < Formula
   sha256 "8589d8298fcf3b5850d0968b04801a4f40faf0555544f6cc9d954b0162e9954b"
 
   depends_on "pkg-config" => :build
-  depends_on "glib-utils" => :build
+  depends_on "glib" => :build
   depends_on "gtk+3"
 
   def install

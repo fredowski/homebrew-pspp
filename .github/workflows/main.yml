@@ -24,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        homebrew_opts: ["--verbose --head","--verbose"]
+        homebrew_opts: ["--verbose --keep-tmp --head","--verbose --keep-tmp"]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -39,3 +39,10 @@ jobs:
         env:
           HOMEBREW_OPTS: ${{ matrix.homebrew_opts }}
         run: brew install $HOMEBREW_OPTS ./Formula/pspp.rb
+
+      - name: Archive testsuite.log
+        uses: actions/upload-artifact@v3
+        with:
+          name: testsuite.log
+          path: "/private/tmp/pspp-*/pspp-*/tests/testsuite.log"
+

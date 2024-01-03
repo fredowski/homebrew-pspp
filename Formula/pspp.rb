@@ -1,8 +1,8 @@
 class Pspp < Formula
   desc "statistical analysis of sampled data"
   homepage "https://www.gnu.org/software/pspp"
-  url "https://ftp.gnu.org/gnu/pspp/pspp-1.6.2.tar.gz"
-  sha256 "73294ca2f5b2f7fc41bbf8b78c5888c8075f43c6097fd482abb04f85ab0847b6"
+  url "https://ftp.gnu.org/gnu/pspp/pspp-2.0.0.tar.gz"
+  sha256 "a8f6cb886af5b083843579bcd6fb191c054acce28cc68b58e7c5f09996a2d8df"
   head "https://benpfaff.org/~blp/pspp-master/latest-source.tar.gz"
 
   option "with-relocation", "Build a relocatable application which is required for a bundle"

@@ -35,9 +35,11 @@ jobs:
       - name: Spreadsheet widget
         run: brew install --verbose ./Formula/spread-sheet-widget.rb
 
-      - name: pspp
+      - name: pspp-stable
         if: matrix.psppversion == 'stable'
         run: brew install --verbose --keep-tmp ./Formula/pspp.rb
+
+      - name: pspp-head
         if: matrix.psppversion == 'head'
         run: brew install --verbose --keep-tmp --head ./Formula/pspp.rb
 

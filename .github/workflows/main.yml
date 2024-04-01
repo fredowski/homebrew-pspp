@@ -49,3 +49,9 @@ jobs:
           name: testsuite-${{ matrix.psppversion }}.log
           path: "/private/tmp/pspp-*/pspp-*/tests/testsuite.log"
 
+      - name: Archive config.log
+        uses: actions/upload-artifact@v4
+        with:
+          name: config-${{ matrix.psppversion }}.log
+          path: "/private/tmp/pspp-*/pspp-*/config.log"
+

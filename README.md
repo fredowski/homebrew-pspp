@@ -7,6 +7,7 @@ Install pspp and spread-sheet-widget via homebrew.
 
 https://www.gnu.org/software/pspp/
 
+## Install
 To install pspp via homebrew  you need to add this tap to your
 homebrew installation:
 
@@ -19,6 +20,14 @@ For the latest development version do
 
 ```
 brew install --head --verbose pspp
+```
+
+## Run
+
+To run the graphical user interface of pspp:
+
+```
+psppire
 ```
 
 Contact: pspp-users@gnu.org

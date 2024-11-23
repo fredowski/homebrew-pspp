@@ -4,7 +4,7 @@ class SpreadSheetWidget < Formula
   url "http://alpha.gnu.org/gnu/ssw/spread-sheet-widget-0.10.tar.gz"
   sha256 "80692ec350271995e147dc759929cdd79d3b645e6b5efaa6b57f4d2d05e847e5"
 
-  depends_on "pkg-config" => :build
+  depends_on "pkgconf" => :build
   depends_on "glib" => :build
   depends_on "gtk+3"
 

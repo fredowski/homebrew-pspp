@@ -8,6 +8,7 @@ class Pspp < Formula
   option "with-relocation", "Build a relocatable application which is required for a bundle"
 
   depends_on "glib" => :build
+  depends_on "readline"
   depends_on "gtk+3"
   depends_on "gtksourceview4"
   depends_on "adwaita-icon-theme"
@@ -28,6 +29,8 @@ class Pspp < Formula
     end
     system "./configure", "--disable-debug",
                           "--without-perl-module",
+                          "CPPFLAGS=-I#{HOMEBREW_PREFIX}/opt/readline/include",
+                          "LDFLAGS=-L#{HOMEBREW_PREFIX}/opt/readline/lib",
                           *args,
                           "--prefix=#{prefix}"
     system "make"

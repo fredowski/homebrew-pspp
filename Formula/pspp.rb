@@ -19,6 +19,7 @@ class Pspp < Formula
   depends_on "gsl"
   depends_on "coreutils" => :build
   depends_on "spread-sheet-widget"
+  depends_on "libiconv"
 
   def install
     args = ["--disable-dependency-tracking",
@@ -27,8 +28,11 @@ class Pspp < Formula
       args << "--enable-relocatable"
       args << "--disable-rpath"
     end
+    libiconv = Formula["libiconv"]
     system "./configure", "--disable-debug",
                           "--without-perl-module",
+                          "--without-libiconv-prefix",
+                          "--with-libiconv-prefix=#{libiconv.opt_prefix}",
                           "CPPFLAGS=-I#{HOMEBREW_PREFIX}/opt/readline/include",
                           "LDFLAGS=-L#{HOMEBREW_PREFIX}/opt/readline/lib",
                           *args,

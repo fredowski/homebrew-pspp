@@ -3,10 +3,17 @@ class SpreadSheetWidget < Formula
   homepage "https://www.gnu.org/software/ssw/"
   url "http://alpha.gnu.org/gnu/ssw/spread-sheet-widget-0.10.tar.gz"
   sha256 "80692ec350271995e147dc759929cdd79d3b645e6b5efaa6b57f4d2d05e847e5"
+  revision 1
 
   depends_on "pkgconf" => :build
   depends_on "glib" => :build
   depends_on "gtk+3"
+
+  # see: https://savannah.gnu.org/bugs/?67198
+  patch do
+    url "https://github.com/fredowski/ssw/commit/87fa64cbc11471d6c6a292e0cae3292484253de9.diff"
+    sha256 "9f9c42e5db0937a570625549fca1388413926a003be588fba8c105eec2d1f62e"
+  end
 
   def install
     system "./configure", "--disable-dependency-tracking",

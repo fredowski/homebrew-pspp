@@ -33,6 +33,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Spreadsheet widget
+        run: brew tap fredowski/pspp
         run: brew install --verbose spread-sheet-widget
 
       - name: pspp-stable

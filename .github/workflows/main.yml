@@ -40,7 +40,7 @@ jobs:
 
       - name: pspp-stable
         if: matrix.psppversion == 'stable'
-        run: brew install --verbose --keep-tmp pspp.rb
+        run: brew install --verbose --keep-tmp pspp
 
       - name: pspp-head
         if: matrix.psppversion == 'head'

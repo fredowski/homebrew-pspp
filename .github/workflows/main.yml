@@ -33,15 +33,15 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Spreadsheet widget
-        run: brew install --verbose ./Formula/spread-sheet-widget.rb
+        run: brew install --verbose spread-sheet-widget
 
       - name: pspp-stable
         if: matrix.psppversion == 'stable'
-        run: brew install --verbose --keep-tmp ./Formula/pspp.rb
+        run: brew install --verbose --keep-tmp pspp.rb
 
       - name: pspp-head
         if: matrix.psppversion == 'head'
-        run: brew install --verbose --keep-tmp --head ./Formula/pspp.rb
+        run: brew install --verbose --keep-tmp --head pspp
 
       - name: Archive testsuite.log
         uses: actions/upload-artifact@v4

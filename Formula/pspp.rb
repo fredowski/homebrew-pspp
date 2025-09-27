@@ -1,7 +1,7 @@
 class Pspp < Formula
   desc "statistical analysis of sampled data"
   homepage "https://www.gnu.org/software/pspp"
-  url "https://ftp.gnu.org/gnu/pspp/pspp-2.0.1.tar.gz"
+  url "https://ftpmirror.gnu.org/gnu/pspp/pspp-2.0.1.tar.gz"
   sha256 "8edbb0f09e8cf8010cad9e0559e0230d7fc5aae4721c756c350554df33024c00"
   head "https://benpfaff.org/~blp/pspp-master/latest-source.tar.gz"
 

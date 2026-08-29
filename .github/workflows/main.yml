@@ -35,6 +35,9 @@ jobs:
       - name: Tap pspp
         run: brew tap fredowski/pspp
 
+      - name: Trust
+        run: brew trust fredowski/pspp
+
       - name: Spreadsheet widget
         run: brew install --verbose spread-sheet-widget
 

@@ -13,6 +13,7 @@ homebrew installation:
 
 ```
 brew tap fredowski/pspp
+brew trust fredowski/pspp
 brew install pspp
 ```
 

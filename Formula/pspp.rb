@@ -7,6 +7,7 @@ class Pspp < Formula
 
   option "with-relocation", "Build a relocatable application which is required for a bundle"
 
+  depends_on "pkgconf" => :build
   depends_on "glib" => :build
   depends_on "readline"
   depends_on "gtk+3"
